@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Retail Assistant</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <!-- Main Chat Container -->
+        <main class="chat-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-info">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <i data-lucide="shopping-bag" class="avatar-icon"></i>
+                        </div>
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="header-text">
+                        <h2>Aura Assistant</h2>
+                        <p class="status-text">Retail Support Bot</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn" id="theme-toggle" title="Toggle Theme">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <button class="action-btn" id="clear-chat" title="Clear Chat">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Area -->
+            <section class="chat-messages" id="chat-messages">
+                <!-- Welcome Message -->
+                <div class="message-group bot">
+                    <div class="message-avatar">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! Welcome to <strong>Aura Retail</strong>. 🛍️</p>
+                        <p>I'm your virtual retail assistant. How can I help you today? You can ask me about:</p>
+                        <ul>
+                            <li>Our product collections</li>
+                            <li>Order tracking & shipping policy</li>
+                            <li>Returns & exchange FAQs</li>
+                        </ul>
+                        <span class="message-time" id="welcome-time">10:00 AM</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator-container hidden" id="typing-indicator">
+                <div class="message-avatar">
+                    <i data-lucide="shopping-bag"></i>
+                </div>
+                <div class="typing-bubble">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <footer class="chat-footer">
+                <form id="chat-form" class="chat-form">
+                    <input 
+                        type="text" 
+                        id="chat-input" 
+                        placeholder="Ask Aura Assistant..." 
+                        autocomplete="off" 
+                        required
+                    />
+                    <button type="submit" id="send-button" class="send-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Script Application -->
+    <script src="app.js"></script>
+</body>
+</html>
